@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --primary:#3AAFA9;
+    --ascent:#F6C667;
+    --background:#FAF9F6;
+    --text:#333333;
+    --highlight:#F27A5E;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--background);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Libre Baskerville", serif;
+}
+p, button, a , li{
+    font-family: "Nunito Sans", sans-serif;
+}
+h1{
+    font-size: 70px;
+    font-weight: 800;
+}
+h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+h3{
+    font-size: 28px;
+    font-weight: 600;
+}
+p{
+    font-size: 18px;
+}
+/* Navbar */
+.navbar {
+  background-color: #3AAFA9;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FAF9F6;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #FAF9F6;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: hsla(0, 0%, 100%, 0.803);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #FAF9F6;
+  cursor: pointer;
+}
+
+
+.contain{
+    width: 100%;
+    min-height: 500px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    top: 0;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.contain .text{
+    width: 600px;
+    height: auto;
+}
+.contain  .text h1{
+    font-weight: 800;
+    line-height: 70px;
+}
+.contain  .text h1 span{
+    background: var(--primary);
+    color: #fff;
+}
+.contain  .text p{
+    font-size: 20px;
+    color: var(--text);
+    line-height: 40px;
+    margin: 16px 0;
+}
+.contain img{
+    width: 400px;
+}
+.contain .buttons{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+.contain .buttons button{
+    width: 160px;
+    height: 50px;
+    background: var(--primary);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+.contain .buttons button a{
+    font-size: 16px;
+    color: #FAF9F6;
+    font-weight: 600;
+}
+
+#help .contain{
+    background: none;
+    padding: 40px;
+}
+#help .contain .help{
+      width: 100%;
+      height: auto;
+      border: 4px solid var(--primary);
+      padding: 20px;
+      border-radius: 20px;
+}
+#help .contain .help h2,h3{
+    color: var(--primary);
+}
+#help .contain .help p{
+    font-size: 20px;
+    color: var(--text);
+    line-height: 40px;
+    margin: 16px 0;
+}
+#help .contain .help ul{
+    margin: 12px 20px;
+}
+#help .contain .help ul li{
+    list-style: disc;
+    margin: 12px 0;
+    font-size: 20px;
+    color: var(--text);
+}
+
+.title{
+    text-align: center;
+}
+.title h2{
+    font-size: 50px;
+}
+#testimonials .contain{
+    background: none;
+    margin-top: 30px;
+}
+#testimonials .contain .card{
+    width: 400px;
+    height: auto;
+    background: var(--primary);
+    padding: 12px ;
+    border-radius: 12px;
+}
+#testimonials .contain .card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#testimonials .contain .card p{
+       font-size: 20px;
+       line-height: 30px;
+       font-weight: 500;
+       margin: 12px 0;
+       color: var(--background);
+}
+#testimonials .contain .card h4{
+    font-weight: 600;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+#about .contain{
+    background: none;
+    margin-top: 30px;
+}
+#about .contain img{
+    width: 500px;
+}
+#about .contain .about-text{
+   width: 500px;
+}
+#about .contain .about-text p{
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 400;
+}
+
+#about-author .contain{
+    background: none;
+}
+#about-author .contain .about-card{
+    width: 1000px;
+    height: auto;
+    background: #fff;
+    margin: 80px 0;
+    text-align: center;
+    border-radius: 50px;
+
+}
+#about-author .contain .about-card img{
+    width: 1000px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+#about-author .contain .about-card h3{
+    margin: 16px 0;
+}
+#about-author .contain .about-card p{
+    width: 900px;
+    margin-left: 50px;
+    font-size: 20px;
+    line-height: 40px;
+    color: #333333;
+    margin-bottom: 16px;
+}
+
+#help, #testimonials, #about, #about-author, #banner{
+    padding-top: 100px;
+}
+#banner .contain{
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(banner.png);
+    background-size: cover;
+    background-position:right;
+    min-height: 350px;
+    display: block;
+    text-align: center;
+}
+#banner .contain h3{
+    margin-top: 80px;
+    font-size: 32px;
+}
+#banner .contain p{
+    color: var(--background);
+    line-height: 36px;
+    margin-top: 12px;
+}
+#banner .contain button{
+    width: 160px;
+    height: 50px;
+    background: var(--primary);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 20px;
+}
+#banner .contain button a{
+    font-size: 16px;
+    color: #FAF9F6;
+    font-weight: 600;
+}
+.footer{
+    width: 100%;
+    min-height: 40px;
+    text-align: center;
+    padding: 20px;
+    background: #3AAFA9;
+}
+.footer p{
+    color: #FAF9F6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #3AAFA9;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 12px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .contain{
+    padding: 20px;
+  }
+  h1{
+    font-size: 50px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  h3{
+    font-size: 24px;
+  }
+  p{
+    font-size: 18px;
+  }
+  .title h2{
+    font-size: 30px;
+  }
+  #testimonials .contain .card{
+    width: 100%;
+  }
+  #testimonials .contain .card p{
+    font-size: 18px;
+  }
+  #testimonials .contain .card h4{
+    font-size: 16px;
+  }
+  #about .contain{
+    margin-top: 10px;
+  }
+  #about .contain img{
+    width: 400px;
+  }
+  #about .contain .about-text{
+    width: 100%;
+    padding: 12px;
+  }
+   #about .contain .about-text p{
+    font-size: 18px;
+   }
+   #about-author .contain .about-card{
+    width: 100%;
+   }
+   #about-author .contain .about-card img{
+    width: 100%;
+   }
+   #about-author .contain .about-card h3{
+    margin: 12px 0;
+    font-size: 20px;
+   }
+   #about-author .contain .about-card p{
+    width: 100%;
+    font-size: 18px;
+    margin: 0;
+   }
+   #banner .contain h3{
+    margin-top: 60px;
+    font-size: 28px;
+}
+.footer p{
+    font-size: 18px;
+}
+}
